@@ -1,0 +1,138 @@
+workflows:
+    ios-workflow:
+      name: iOS Workflow
+      environment:
+        vars:
+          XCODE_WORKSPACE: "Voxale.xcworkspace" # <-- Put the name of your workspace here.
+          XCODE_SCHEME: "Voxale" # <-- Put the name of your scheme here.
+          BUNDLE_ID: "com.nicolocurioni.Voxale" # <-- Put your Bundle Id here.
+          # https://docs.codemagic.io/code-signing-yaml/signing-ios/
+          APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmc3WldXRWZCUDRFQjk2SzR2b3pHWEVzRzZtWDVDZDg5OVVEdTNYUXV4Ql9GcHZKcnpQcFdlRjFfZGJSaVJzYVFUNi1ZbEV5WHR5WDN1ak9remY5elRZbjFpTDRFNGlDU1hicHp6a1ZFc2dWYnNNLXEtS0p1SkM4czVGU0xfdVZjLXJOWmI=) # <-- Put your encrypted App Store Connect Issuer Id here
+          APP_STORE_CONNECT_KEY_IDENTIFIER: Encrypted(Z0FBQUFBQmc3WmFqNXl4eExva1FFR05LVVJFWE5BZ1MxVGw0LTZyYVg4WXBTVTRKNGRVSFM3MVFmTlM3aWl6Z09sZklULVFSN0RDdHYwbnoyLWF2Y3BTS090Tk9TbWI5RlE9PQ==) # <-- Put your encrypted App Store Connect Key Identifier here
+          APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmc3WmpjTVVkTXpRQkRjV0dZNE9id0FLdUlxQjd5d015YW5TNGxXTU5VcFdUUVpWYUxxbC15Q0ZYQ3g1Z0xIakRRUmZ2bEZHYmNxUjUwZGdfOEM4NXJWdjBqSk9UeC1ySTM3SzFzRWxqOTc1VnMzbUdCYTZqcTJJM09yRjJoN3RxUG9Ha2RpYUN1d0hsc00zVXUwWjNsMGhmczBkMThSaEdBSUs1QWItZHRCZlBPZ3ZJZ2tlb2FXbXduX1hHNDNKbnpoTDlBaVRSSWtPcFBIRldDZnd0WTF1RTI3R2piSktqd0I4aVp0UWZ1TzV4Q3g3R1BOQkIyTUc0YlQ5T2l2Z0I2bkVBOXEtNE96VUFlMVJvNGZZOGZ0V0FqTlV1Mzl6VlpOU0ZhbUtmUHF6bEJVaTgycF9Qakg3enVMYlRxVXAwWDBHMjBfRkRGQ0dCNXBBNDFBVlRzSjFPYTR3NFdfRmcxU1JVWTl5eS1aeU80M2hYV2VsZGZmcC1DNTNxaUtnalR4azBDQW1QUGFmX1hjVzlMTkpwVzY3ZnhUMXEtMERMVkhBdlo5eG43Q0JYU01hdz0=) # <-- Put your encrypted App Store Connect Private Key here
+          CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmc3Wmw4ckNvLVRGYW43MkFmM2VIR2hybU9UVlA4YWN4cFVkNDFINEVTVW40OFRuSmo2eEpRRHhIVG43aVlwTjBXZU81MFdsREl6VUFDVWJZNWJWdzZlUTBfVTdkMHhLZFBWZDJOaHVRNjY4OUFCcTB4NW5lS0FjalJhcjg1SUw0N2oxdU80X1BpMjhJUktsTkVpX2hzNkkzV3lqcVkzQXMxMlpOSU9lcE9zWGZnME5IMzBVeFBUUFdzOV9DTzIzMTAxcXBFNVhyazFIREFxd1hCUEJTY0tzTTdXX3RSOXYyRjkyYy1NMmFtZEwwWHFoUWtUQWFyTVo1WkNYdkU1ck1VSW83WVJhcm5WTmhlM012MHlKNl8zWWQzRm9GaWNleXpVaXVHWkpHS3JZZnQ0ZXpacGl6NFRWbV9fRVVEYUxvMXppLVh0Rk0tUldCMlJPWVZLMEp4UFFrMTY5VGxOWElpVFlWcjFpWFVteDlpa2dVVDFWNTBwU005em5BZENSalI3VThtU2FsZkRJY05ZMDlsR0hFUDBGTFhHYXdSVW5SeElTaTdUNWtHak0tbHhzWngteDR2WDlUNm5NU25CWWZjNFMzbVBfQjNRVXR4UTFTSFlqTV9qMVo0XzNMMlZBQjVUMnBOVlJxYzRuYzJMQ1YtREVkTkx5LXYyRWFLVVA1SWhxZFplLWlOSVVFNkFKRGNWRXloZ1AxMV9xYWk4WGh3Um9jZktRY2VrNU9TX2NteVVGejhZVkxNaWZJTWo4M0JmVl95OU1UZVBXdVdCRFdjZFVLZDNadGtDTkpaMjNkWk9RZWNpZ19Rc0pRRTlHWjZpZnJpQ256VlVNcVMxOVpWSExUQWJBQTNaYUk3VTNkbUtGeC1PNGRNWG5KRUFvMkRhaVFPd040UzAzRlJLOGp4akM1aXpjNFBEaHJOb0VKc3FhZVJqNHlIYVV3Snl4WGpFV3czc1JfbjVEVnE3a1pwTWQ0S1pmNjVqWk9vc2tjeThrTDNlMWVCOEduQ1JMdXJmY3czNmRIZWJrdV9qeDB6SlREZUZxMThvMTdVX01QdmZiOFVMX3FTT2xuaWM5cXY4cjd4LUJCN0RkNE15VGJ4dDhIY3RTaEJCMUY3YUkzcklTMWttUThST05aM01wbFpxa3dOQzJjN0IzVGJRNjJCQ3VKenNHVmtKX2kzdUxjSlI1aXpnX1ZxalpMS3BoVW9ka2J3SlpCcV9RN0VlN2RPVGphV1VpdHM4MXctRzNKTE9nVWFkSGZVRGNzS29lSkNKVnNkSmZjWEdVSS1vNzBPN1JiaEF1MlJucVJUeHJrckJ2UWg3UHRoOG1rTHZ5M2tiNTBDWF9fa0NBNGp2TWJSeWxqTzltenNwU2FXamhwMUJNNnV3cmpUd2d5Qm9VS2xXc1phUVZjQ0R1WENtZkJTQXpmRkRoODNQdEEyNVREM1ZJbXJIU0o2Q2lHSXkxZ05seEE3R0VIbGhDNmlBTVdKd1U2cmdSRFY0TmJEbTRTc0FqQU5yQUlNZVFlYXpPRHFyZDllOTVreDFrV0dkWnFvbkFtMDBibXM1Nzg5WlBtWmxwTU82akc1TGRDRXhHVUdjN05EdUp1ZmVHdlJRemJPV3NUZHYtOWx3bmtSM0hDekxMdHZrNlUxcFRWRWtwWUh3NldickhlcDJjYVVMVUdxS0c3NVlkUmVyRWhSek5JYmdMT2UyNGVqSEs3ZGRXdmptZ3J4V1l4bVFteE1Lc1JBd1BLWVh4LUFxd3FfOXl0V3pkQzNSVWxCR19CdUlZaUFWNk9wZUhDV2RJU1BMY2JJbjk1NW1pZEhxbnQ1Nk1xWXJ5NXpWZy1ETUNhaE1lRV9HU1pIUW5EMERfSmxHc251a29GQmowVVFSUVN5Ui1BS2JaMTRPYndyYS1UZElLc0FHR2k0Y3hnb3FWSW5RNXhzNWFXdTVON0dtUTRLelY0MGludHVqd1l5cWtnV1ItRmozSEFDYWZ5SzVha1c4SC1JNnpiR0Nva0h6QU5TUUxnZlB0YWw1cmFKelRKN1RZNHU5NC1GTllYN2tVZjU3OXhreURYQkpvV3NwdDRiRkJmZUNRVWYwSm5VeE9HOWhIbmFSR3h5WjJ4TkE5OHQ2TWZwXzdRckRBWGdtT3F4ZWUyLVh3SGhURVNsdGxlX0dSeW5SS21tWTFpQlJFZ2tyUFZaVHhmaEhYTnZURFVGVkJYSVJYMHhjZ0EydFVZSUpDMExIbXFUOG9Rby10LTR6djYwMFIyT2FwaDBKNks5a1hBWk8zR0gtNFpVOUgtVmVlTG50Uk9WSVlPOHFJbUtOX0RFMEJheFlCQ1BQZEpibWptZ3FDMlpRNDdmZWozSjBLWk1TLWdKZWJ3OTEzN0duUVY2ZEJUY0YyRkZIaGREaHpQSTZaV1ZNQmhzNkQ4RDk3Tko1MHA4amQ1dzhDc3o2Tmd1OHpxVnNLRTg5VGNpV19IaENnUXR3Z0F4TEZfaUp2eHRnRVBMMkJPakNVRjZaRGR2Z0wtVjBUYjhOaU5zcHRvc0xuR2M2bkxHdGI4dFFWY19zeGFCVTVqbWQwenRuUGpHN2JYaWJTLVloNEtxUWt3ZGplNXEyTXBvT0tvQ1YyWHNYNlZDajFTbi1YaWszVnhHLWJTVWhtdmYxTXQyTzZsT3loQkswdWFSQ0wxZTFkZTZIVHM5c3ZSdjJyRC1PbktHRDdPUThfVnBaNkZ1V1VvRHdxcGl2eGdtaWhTUWJyTVFYbEhybWNGZF9IcDBGNlNWRTJyUnY0dng4Uk5NSFFMRDVva0xqWnE4WnBJVTBDNlNoLUo2eWU5NUVsUkhsY2s3bFRDcnV2YUdQS0FEVkRzQjZTMVRpNlBPbWlGamJuSVNJajV4OXFnSU5WbFpqLUNncDNwNWhaM3QtX29SZU1fVmdtekRLRnZZUEx1M3lMc0pCNTNhTFNHX09IY0ZVQkkwMDF0WVNla29FSEpUaWtiRU1zTXVwY0cyaWxWNUV0RmJmOUdpbkZ2VzB4dmVVZ0FSOHRxcmFwTVVGb1VqSkJVOTlkVEdYdHU1R2pnSHhjQ1M0N2Nu) # <-- Put your encrypted Certificate Private Key here
+          APPLE_ID_EMAIL: Encrypted(Z0FBQUFBQmc3Wk9UVnlBVTJ0QVM2czMybWtMLXl6ZGtDSkpNdnB0Nm1vbGc2SHNxa2l0OVJUemFJNmszZkRscWpud01NVmI4S2JuR0VSTlM3RlRqanoxUWxxYkc4U1o1X1BNOFJmM0FNeFcteVg2ZlQxTjBINkE9) # <-- Put your encrypted Apple Id email address here
+          APP_SPECIFIC_PASSWORD: Encrypted(Z0FBQUFBQmc3WlE1Z3NOWkk4eFZ4YzV2UXEyR2cyWEh2Nkd1d2c1cDVjcWRlaXJsLThIUVFiUDJjZmRNS2hLM0hMYTkyXzhsY0hhY3JZNzh4WkcwRmZzZjdTZGhhRDl5RlpLRlFvQlhka2pkWGZqNWQtcVRrVDg9) # <-- Put your encrypted App Specific password address here
+        xcode: latest
+        cocoapods: default
+      triggering:
+        events:
+          - push
+          - tag
+          - pull_request
+        branch_patterns:
+          - pattern: 'develop'
+            include: true
+            source: true
+      scripts:
+        - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
+          script: |
+            keychain initialize
+        - name: Fetch signing files
+          script: |
+            app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
+        - name: Use system default keychain
+          script: |
+            keychain add-certificates
+        - name: Set up code signing settings on Xcode project
+          script: |
+            xcode-project use-profiles
+        - name: Increment build number
+          script: |
+            #!/bin/sh
+            set -e
+            set -x
+            cd $FCI_BUILD_DIR
+            agvtool new-version -all $(($BUILD_NUMBER + 1))
+        - name: Build ipa for distribution
+          script: |
+            xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
+      artifacts:
+        - build/ios/ipa/*.ipa
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+      publishing:
+        app_store_connect:   # https://docs.codemagic.io/publishing-yaml/distribution
+          apple_id: $APPLE_ID_EMAIL
+          password: $APP_SPECIFIC_PASSWORD
+        email:
+            recipients:
+              - user1@example.com
+              - user2@example.com
+            notify:
+              success: true
+              failure: true
+        slack:
+            channel: '#builds'
+            notify_on_build_start: true    # To receive a notification when a build starts
+            notify:
+              success: false               # To not receive a notification when a build succeeds
+              failure: false               # To not receive a notification when a build fails
+    ios-staging-workflow:
+      name: iOS Staging Workflow
+      working_directory: ios/ios-automatic-code-signing-demo-project
+      environment:
+        vars:
+          XCODE_WORKSPACE: "swiftly.xcworkspace" # <-- Put the name of your workspace here.
+          XCODE_SCHEME: "swiftly" # <-- Put the name of your scheme here.
+          BUNDLE_ID: "io.codemagic.cmswiftly" # <-- Put your Bundle Id here.
+          # https://docs.codemagic.io/code-signing-yaml/signing-ios/
+          APP_STORE_CONNECT_ISSUER_ID: Encrypted(...) # <-- Put your encrypted App Store Connect Issuer Id here
+          APP_STORE_CONNECT_KEY_IDENTIFIER: Encrypted(...) # <-- Put your encrypted App Store Connect Key Identifier here
+          APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(...) # <-- Put your encrypted App Store Connect Private Key here
+          CERTIFICATE_PRIVATE_KEY: Encrypted(...) # <-- Put your encrypted Certificate Private Key here
+          APPLE_ID_EMAIL: Encrypted(...) # <-- Put your encrypted Apple Id email address here
+          APP_SPECIFIC_PASSWORD: Encrypted(...) # <-- Put your encrypted App Specific password address here
+          APPLE_APP_ID: 1570610860
+        xcode: latest
+        cocoapods: default
+      triggering:
+        events:
+          - push
+          - tag
+          - pull_request
+        branch_patterns:
+          - pattern: 'develop'
+            include: true
+            source: true
+      scripts:
+        - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
+          script: |
+            keychain initialize
+        - name: Fetch signing files
+          script: |
+            app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
+        - name: Use system default keychain
+          script: |
+            keychain add-certificates
+        - name: Set up code signing settings on Xcode project
+          script: |
+            xcode-project use-profiles
+        - name: Increment build number
+          script: |
+            #!/bin/sh
+            set -e
+            set -x
+            cd $FCI_BUILD_DIR
+            agvtool new-version -all $(($BUILD_NUMBER + 1))
+        - name: Build ipa for distribution
+          script: |
+            xcode-project build-ipa --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
+      artifacts:
+        - build/ios/ipa/*.ipa
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+      publishing:
+        app_store_connect:   # https://docs.codemagic.io/publishing-yaml/distribution
+          apple_id: $APPLE_ID_EMAIL
+          password: $APP_SPECIFIC_PASSWORD
+        email:
+            recipients:
+              - user1@example.com
+            notify:
+              success: true
+              failure: true
+        slack:
+            channel: '#builds'
+            notify_on_build_start: true    # To receive a notification when a build starts
+            notify:
+              success: false               # To not receive a notification when a build succeeds
+              failure: false               # To not receive a notification when a build fails

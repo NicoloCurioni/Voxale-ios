@@ -12,6 +12,7 @@
 		A1167E02269CD0FB00B59456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1167E01269CD0FB00B59456 /* Assets.xcassets */; };
 		A1167E05269CD0FB00B59456 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1167E04269CD0FB00B59456 /* Preview Assets.xcassets */; };
 		A1167E16269CD2EF00B59456 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1167E15269CD2EF00B59456 /* GoogleService-Info.plist */; };
+		A11E7953269DD5F7005E099C /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = A11E7952269DD5F7005E099C /* codemagic.yaml */; };
 		A1561ED9269D6EE400B04703 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A1561ED8269D6EE400B04703 /* FirebaseAnalytics */; };
 		A1561EDB269D6EE400B04703 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A1561EDA269D6EE400B04703 /* FirebaseAuth */; };
 		A1561EDD269D6EE400B04703 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A1561EDC269D6EE400B04703 /* FirebaseFirestore */; };
@@ -31,6 +32,7 @@
 		A1167E01269CD0FB00B59456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1167E04269CD0FB00B59456 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1167E15269CD2EF00B59456 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A11E7952269DD5F7005E099C /* codemagic.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 		A1561EE2269D6F6C00B04703 /* VoxaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxaleModel.swift; sourceTree = "<group>"; };
 		A1561EE4269D6FE100B04703 /* VoxaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxaleRepository.swift; sourceTree = "<group>"; };
 		A1561EE9269D718E00B04703 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		A1167DFC269CD0FA00B59456 /* Voxale */ = {
 			isa = PBXGroup;
 			children = (
+				A11E7952269DD5F7005E099C /* codemagic.yaml */,
 				A1167E17269CD2F800B59456 /* App */,
 				A1167DFF269CD0FA00B59456 /* ContentView.swift */,
 				A1561ED6269D6E8F00B04703 /* Repository */,
@@ -222,6 +225,7 @@
 				A1167E16269CD2EF00B59456 /* GoogleService-Info.plist in Resources */,
 				A1167E05269CD0FB00B59456 /* Preview Assets.xcassets in Resources */,
 				A1167E02269CD0FB00B59456 /* Assets.xcassets in Resources */,
+				A11E7953269DD5F7005E099C /* codemagic.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +391,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -417,7 +421,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

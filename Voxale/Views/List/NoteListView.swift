@@ -20,7 +20,17 @@ struct NoteListView: View {
                     
                     List(cardListViewModel.notes) { note in
                         
-                        Text(note.name)
+                        VStack(alignment: .leading) {
+                            
+                            Text(note.name)
+                                .font(.headline)
+                                .foregroundColor(.black)
+                            
+                            Text(note.date)
+                                .font(.headline)
+                                .foregroundColor(.gray)
+                        }
+                        .padding()
                     }
                     
                 }.sheet(isPresented: self.$presentingModal) {
@@ -49,6 +59,7 @@ struct NoteListView: View {
                                 .padding(.bottom, 7)
                         })
                             .background(Color.blue)
+                            .frame(width: 60, height: 60)
                             .cornerRadius(20)
                             .padding()
                             .shadow(color: Color.black.opacity(0.4), radius: 3, x: 3, y: 3)

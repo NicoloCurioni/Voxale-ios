@@ -46,7 +46,9 @@ struct AddNoteView: View {
                         
                         noteDate = DateFormatter.localizedString(from: today, dateStyle: .medium, timeStyle: .short)
                         
-                        let note = VoxaleModel(name: noteName, date: noteDate, mood: noteMood)
+                        let userMood = moods[currentMood]
+                        
+                        let note = VoxaleModel(name: noteName, date: noteDate, mood: userMood)
                         
                         cardListViewModel.add(note)
                         
