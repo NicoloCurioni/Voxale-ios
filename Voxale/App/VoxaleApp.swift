@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct VoxaleApp: App {
+    
+    init() {
+        
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NoteListView(cardListViewModel: VoxaleListViewModel())
         }
     }
 }

@@ -11,6 +11,17 @@
 		A1167E00269CD0FA00B59456 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1167DFF269CD0FA00B59456 /* ContentView.swift */; };
 		A1167E02269CD0FB00B59456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1167E01269CD0FB00B59456 /* Assets.xcassets */; };
 		A1167E05269CD0FB00B59456 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1167E04269CD0FB00B59456 /* Preview Assets.xcassets */; };
+		A1167E16269CD2EF00B59456 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1167E15269CD2EF00B59456 /* GoogleService-Info.plist */; };
+		A1561ED9269D6EE400B04703 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A1561ED8269D6EE400B04703 /* FirebaseAnalytics */; };
+		A1561EDB269D6EE400B04703 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A1561EDA269D6EE400B04703 /* FirebaseAuth */; };
+		A1561EDD269D6EE400B04703 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A1561EDC269D6EE400B04703 /* FirebaseFirestore */; };
+		A1561EDF269D6EE400B04703 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A1561EDE269D6EE400B04703 /* FirebaseFirestoreSwift-Beta */; };
+		A1561EE1269D6EE400B04703 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A1561EE0269D6EE400B04703 /* FirebaseStorage */; };
+		A1561EE3269D6F6C00B04703 /* VoxaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1561EE2269D6F6C00B04703 /* VoxaleModel.swift */; };
+		A1561EE5269D6FE100B04703 /* VoxaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1561EE4269D6FE100B04703 /* VoxaleRepository.swift */; };
+		A1561EEA269D718E00B04703 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1561EE9269D718E00B04703 /* NoteListView.swift */; };
+		A1561EEC269D71B700B04703 /* VoxaleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1561EEB269D71B700B04703 /* VoxaleListViewModel.swift */; };
+		A1561EF3269D73F200B04703 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1561EF2269D73F200B04703 /* AddNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +30,12 @@
 		A1167DFF269CD0FA00B59456 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1167E01269CD0FB00B59456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1167E04269CD0FB00B59456 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1167E15269CD2EF00B59456 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A1561EE2269D6F6C00B04703 /* VoxaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxaleModel.swift; sourceTree = "<group>"; };
+		A1561EE4269D6FE100B04703 /* VoxaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxaleRepository.swift; sourceTree = "<group>"; };
+		A1561EE9269D718E00B04703 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		A1561EEB269D71B700B04703 /* VoxaleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoxaleListViewModel.swift; sourceTree = "<group>"; };
+		A1561EF2269D73F200B04703 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1561ED9269D6EE400B04703 /* FirebaseAnalytics in Frameworks */,
+				A1561EDF269D6EE400B04703 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				A1561EDB269D6EE400B04703 /* FirebaseAuth in Frameworks */,
+				A1561EE1269D6EE400B04703 /* FirebaseStorage in Frameworks */,
+				A1561EDD269D6EE400B04703 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +73,14 @@
 		A1167DFC269CD0FA00B59456 /* Voxale */ = {
 			isa = PBXGroup;
 			children = (
-				A1167DFD269CD0FA00B59456 /* VoxaleApp.swift */,
+				A1167E17269CD2F800B59456 /* App */,
 				A1167DFF269CD0FA00B59456 /* ContentView.swift */,
+				A1561ED6269D6E8F00B04703 /* Repository */,
+				A1561ED5269D6E8200B04703 /* ViewModels */,
+				A1561ED4269D6E7900B04703 /* Models */,
+				A1167E14269CD27100B59456 /* Views */,
 				A1167E01269CD0FB00B59456 /* Assets.xcassets */,
+				A1167E15269CD2EF00B59456 /* GoogleService-Info.plist */,
 				A1167E03269CD0FB00B59456 /* Preview Content */,
 			);
 			path = Voxale;
@@ -65,6 +92,63 @@
 				A1167E04269CD0FB00B59456 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1167E14269CD27100B59456 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1561EF1269D73E400B04703 /* List */,
+				A1561EED269D739800B04703 /* Add */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1167E17269CD2F800B59456 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1167DFD269CD0FA00B59456 /* VoxaleApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1561ED4269D6E7900B04703 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1561EE2269D6F6C00B04703 /* VoxaleModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1561ED5269D6E8200B04703 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A1561EEB269D71B700B04703 /* VoxaleListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A1561ED6269D6E8F00B04703 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A1561EE4269D6FE100B04703 /* VoxaleRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A1561EED269D739800B04703 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				A1561EF2269D73F200B04703 /* AddNoteView.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		A1561EF1269D73E400B04703 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A1561EE9269D718E00B04703 /* NoteListView.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +167,13 @@
 			dependencies = (
 			);
 			name = Voxale;
+			packageProductDependencies = (
+				A1561ED8269D6EE400B04703 /* FirebaseAnalytics */,
+				A1561EDA269D6EE400B04703 /* FirebaseAuth */,
+				A1561EDC269D6EE400B04703 /* FirebaseFirestore */,
+				A1561EDE269D6EE400B04703 /* FirebaseFirestoreSwift-Beta */,
+				A1561EE0269D6EE400B04703 /* FirebaseStorage */,
+			);
 			productName = Voxale;
 			productReference = A1167DFA269CD0FA00B59456 /* Voxale.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +202,9 @@
 				Base,
 			);
 			mainGroup = A1167DF1269CD0FA00B59456;
+			packageReferences = (
+				A1561ED7269D6EE400B04703 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A1167DFB269CD0FA00B59456 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1167E16269CD2EF00B59456 /* GoogleService-Info.plist in Resources */,
 				A1167E05269CD0FB00B59456 /* Preview Assets.xcassets in Resources */,
 				A1167E02269CD0FB00B59456 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1561EE5269D6FE100B04703 /* VoxaleRepository.swift in Sources */,
+				A1561EE3269D6F6C00B04703 /* VoxaleModel.swift in Sources */,
+				A1561EEA269D718E00B04703 /* NoteListView.swift in Sources */,
 				A1167E00269CD0FA00B59456 /* ContentView.swift in Sources */,
 				A1167DFE269CD0FA00B59456 /* VoxaleApp.swift in Sources */,
+				A1561EF3269D73F200B04703 /* AddNoteView.swift in Sources */,
+				A1561EEC269D71B700B04703 /* VoxaleListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +443,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1561ED7269D6EE400B04703 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1561ED8269D6EE400B04703 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1561ED7269D6EE400B04703 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A1561EDA269D6EE400B04703 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1561ED7269D6EE400B04703 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A1561EDC269D6EE400B04703 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1561ED7269D6EE400B04703 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A1561EDE269D6EE400B04703 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1561ED7269D6EE400B04703 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		A1561EE0269D6EE400B04703 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1561ED7269D6EE400B04703 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1167DF2269CD0FA00B59456 /* Project object */;
 }
